@@ -1,13 +1,31 @@
 {
-    "require": {
-        "vlucas/phpdotenv": "~1.0"
-    },
-    "require-dev": {
-        "phpspec/phpspec": "~2.2"
-    },
-    "autoload": {
-        "psr-0": {
-            "Ezynda3\\FeatureToggle": "src/"
-        }
+  "name": "ezynda3/feature-toggle",
+  "type": "library",
+  "description": "A simple environment variable based feature toggle library.",
+  "keywords": [
+    "environment",
+    "env",
+    "feature toggle",
+    "continuous delivery"
+  ],
+  "homepage": "http://github.com/ezynda3/feature-toggle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ed Zynda III",
+      "email": "ezynda3@gmail.com",
+      "homepage": "http://www.edzynda.com"
     }
+  ],
+  "require": {
+    "vlucas/phpdotenv": "~1.0"
+  },
+  "require-dev": {
+    "phpspec/phpspec": "~2.2"
+  },
+  "autoload": {
+    "psr-0": {
+      "Ezynda3\\FeatureToggle": "src/"
+    }
+  }
 }
