@@ -4,10 +4,20 @@ use Dotenv;
 
 class Manager
 {
+    /**
+     * @var null
+     */
     protected $feature = null;
 
+    /**
+     * @var
+     */
     protected $enabled;
 
+    /**
+     * Constructor
+     * @param string $rootDir
+     */
     public function __construct($rootDir = __DIR__)
     {
         if (file_exists("{$rootDir}/.env")) {
@@ -15,6 +25,11 @@ class Manager
         }
     }
 
+    /**
+     * Select a feature
+     * @param $name
+     * @return $this
+     */
     public function feature($name)
     {
         $name = strtoupper($name);
@@ -24,6 +39,10 @@ class Manager
         return $this;
     }
 
+    /**
+     * Check that the feature is enabled
+     * @return boolean
+     */
     public function isEnabled()
     {
         if (is_null($this->feature)) {
